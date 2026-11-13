@@ -136,9 +136,12 @@ by the challenge's `possession_metrics.py`.
 | evaluation | reference baseline (`smooth50`) | this model |
 |---|---|---|
 | **Pure hold-out.** An earlier configuration was selected on 4 games (3 Metrica + 1 DFL). The other 6 DFL matches finished downloading only afterwards, and were then scored once | 0.184 | **0.332** |
-| **Leave-one-game-out** over all 10 games: search on 9, score the 10th, repeat. Source-balanced | TODO | **TODO** |
+| **Leave-one-game-out** over all 10 games: search on 9, score the 10th, repeat. Source-balanced | 0.266 | **0.438** |
+| … of which, Metrica sample games (3) | 0.345 | **0.527** |
+| … of which, DFL matches (7) | 0.188 | **0.348** |
 
-Every held-out game improved. For scale, the same baseline scores **0.2433** on the provided
+Every held-out game improved, all 10 in the leave-one-game-out run. The held-out score (0.438)
+is close to the in-sample one (0.448), so the selection is not overfitting. For scale, the same baseline scores **0.2433** on the provided
 match's full private ground truth. Re-selecting on all 10 games raised the source-balanced
 in-sample score only from 0.436 to 0.448, so the parameters are not finely tuned to any one game.
 

@@ -7,7 +7,8 @@ Rules for this file:
 
 [S2] marks a value selected by `python -m mtah_possession.calib.cv --search` on 10 labelled
 other games (Metrica sample games 1-3 + the 7 IDSSE/DFL matches), degraded to the ATD noise
-profile; source-balanced spellF1 0.448 vs 0.266 for the reference baseline on the same games.
+profile; source-balanced spellF1 0.448 vs 0.266 for the reference baseline on the same games,
+0.438 leave-one-game-out (every held-out game improved).
 Unmarked values are priors the search kept or could not reach (Smart Tagging: not selectable).
 
 Units are SI (metres, seconds, m/s). Weights are per-frame log-odds at 25 fps, so a weight of 1.0
