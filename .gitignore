@@ -1,0 +1,23 @@
+# --- match data: licensed for the competition only, never commit or redistribute ---
+data/
+Tactical/
+Broadcast/
+*.mp4
+*_atd.xml
+*_atd.txt
+*_homography.csv
+*_smart_tagging.xml
+
+# --- derived from the match data: also never public (frame-level reconstructions) ---
+cache/
+out/
+*.npz
+
+# --- external open data (IDSSE/DFL): re-downloadable, too big for git ---
+external/
+
+# --- python ---
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
