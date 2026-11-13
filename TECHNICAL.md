@@ -1,6 +1,7 @@
 # Ball possession from automatic tracking: evidence + Viterbi, selected on other games
 
-More than a Hack 2027, Phase 1. FC Barcelona (H) vs Athletic Club (A), 199,319 frames.
+**Team Timwork** · More than a Hack 2027, Phase 1. FC Barcelona (H) vs Athletic Club (A),
+199,319 frames. Code: https://github.com/TIMutuma/More-than-a-Hack-2027
 
 ## 1. Approach
 
@@ -168,10 +169,13 @@ as a correctness check, not a selection signal.
 
 ```bash
 git clone https://github.com/metrica-sports/more-than-a-hack-2027.git
-git clone <this repository> mtah-possession && cd mtah-possession
+git clone https://github.com/TIMutuma/More-than-a-Hack-2027.git mtah-possession
+cd mtah-possession
 python -m venv .venv && .venv/Scripts/python -m pip install -r requirements.txt
-.venv/Scripts/python -m mtah_possession.run --data <bundle with tactical/> --name <team>
+.venv/Scripts/python -m mtah_possession.run --data <bundle with tactical/> --name Timwork
 ```
+
+This writes `out/Timwork.csv`, the submitted file.
 
 Deterministic: two runs give a byte-identical CSV, from a cold cache or a warm one. Parameter
 selection is reproducible too: `tools/noise_profile.py`, then `tools/fetch_metrica_sample.py`,

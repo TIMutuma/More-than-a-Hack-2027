@@ -17,7 +17,7 @@ parser and the official metric, which are imported, not copied.
 
 ```bash
 git clone https://github.com/metrica-sports/more-than-a-hack-2027.git
-git clone <this repository> mtah-possession
+git clone https://github.com/TIMutuma/More-than-a-Hack-2027.git mtah-possession
 cd mtah-possession
 python -m venv .venv
 .venv/Scripts/python -m pip install -r requirements.txt      # Windows (bin/ on macOS/Linux)
@@ -25,6 +25,12 @@ python -m venv .venv
 # the match bundle: a folder holding tactical/ (and optionally broadcast/)
 .venv/Scripts/python -m mtah_possession.run --data /path/to/bundle --name <team_name>
 ```
+
+Clone this repository into a folder **not** named `more-than-a-hack-2027`, for example
+`mtah-possession` as above. On case-insensitive file systems (Windows, macOS) its GitHub name
+would otherwise collide with the challenge clone next to it.
+
+The submitted file was produced with `--name Timwork`.
 
 This writes `out/<team_name>.csv` and validates it with the official checks. The run is
 deterministic: the same inputs give a byte-identical file. The first run parses the tracking into
